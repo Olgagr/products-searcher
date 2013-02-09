@@ -1,4 +1,8 @@
 ProductsSearcher::Application.routes.draw do
+  get "shops/index"
+
+  resources :shops
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
