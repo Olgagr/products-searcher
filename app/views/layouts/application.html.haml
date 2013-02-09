@@ -1,14 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>ProductsSearcher</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+!!! 5
+%html
+  %head
+    %title ProductsSearcher
+    = stylesheet_link_tag 'application', media: 'all'
+    = csrf_meta_tags
 
-<%= yield %>
+  %body
 
-</body>
-</html>
+    = yield
+    = javascript_include_tag 'application'
+    = yield :scripts
