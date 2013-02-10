@@ -684,3 +684,10 @@ legend + .control-group {
     padding-left: $horizontalComponentOffset;
   }
 }
+
+.field_with_errors {
+  color:  $errorText;
+  input[type="text"] {
+    border-color: $errorText;
+  }
+}
