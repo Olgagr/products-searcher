@@ -1,0 +1,38 @@
+= form_for @shop, html: { class: 'form-horizontal' } do |f|
+
+  %fieldset
+    - if @shop.errors.any?
+      .alert.alert-error
+        %h3
+          = pluralize @shop.errors.count, 'error'
+          prohibited this shop from being saved:
+        %ul
+          - @shop.errors.full_messages.each do |msg|
+            %li
+              = msg
+
+    .control-group
+      = f.label :name, 'Name', class: 'control-label'
+      .controls
+        = f.text_field :name
+
+    .control-group
+      = f.label :street, 'Street', class: 'control-label'
+      .controls
+        = f.text_field :street
+
+    .control-group
+      = f.label :postal_code, 'Postal Code', class: 'control-label'
+      .controls
+        = f.text_field :postal_code
+
+    .control-group
+      = f.label :city, 'City', class: 'control-label'
+      .controls
+        = f.text_field :city
+
+    .controls
+      = f.submit 'Save', class: 'btn btn-success'
+
+
+
