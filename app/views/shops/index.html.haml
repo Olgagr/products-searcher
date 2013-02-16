@@ -24,3 +24,6 @@
           %td
             = shop.city
           %td
+            = link_to 'Edit', [:edit, shop]
+            |
+            = link_to 'Delete', [shop], confirm: 'Are you sure?', method: :delete

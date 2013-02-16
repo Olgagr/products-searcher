@@ -16,6 +16,27 @@ class ShopsController < ApplicationController
     else
       render action: :new
     end
-
   end
+
+  def edit
+    @shop = Shop.find(params[:id])
+  end
+
+  def update
+    @shop = Shop.find(params[:id])
+
+    if @shop.update_attributes(params[:shop])
+      redirect_to shops_path, notice: 'Shop was successfully updated.'
+    else
+      render action: :edit
+    end
+  end
+
+  def destroy
+    @shop = Shop.find(params[:id])
+    @shop.destroy
+
+    redirect_to shops_path, notice: 'Shop was successfully destroyed.'
+  end
+
 end
