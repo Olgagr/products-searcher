@@ -12,6 +12,10 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+group :development do
+  gem 'quiet_assets'
+end
+
 group :test, :development do
   gem 'rspec-rails', '~> 2.0'
   gem 'capybara', '1.1.2'
