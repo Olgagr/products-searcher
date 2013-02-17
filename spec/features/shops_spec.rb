@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Shop managments' do
+describe 'Shop management' do
 
   before do
     @shop = FactoryGirl.create(:shop)

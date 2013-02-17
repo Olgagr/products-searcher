@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :product do
-    name "MyString"
-    description "MyText"
+    name 'Bagietka'
+    description 'Mniam, mniam'
   end
 end

@@ -1,0 +1,23 @@
+%h2 Products List
+
+= link_to 'Add New Product', [:new, :product], class: 'btn btn-primary'
+
+%table.table#products-list
+  %thead
+    %tr
+      %th Name
+      %th Description
+      %th Actions
+  %tbody
+    - @products.each do |product|
+      %tr
+        %td
+          = product.name
+        %td
+          = product.description
+        %td
+          = link_to 'Edit', [:edit, product]
+          |
+          = link_to 'Delete', [product], confirm: 'Are you sure?', method: :delete
+          |
+          = link_to 'Add to shop', '#'

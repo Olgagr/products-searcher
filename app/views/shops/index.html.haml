@@ -1,7 +1,6 @@
-%h2
-  Shops List
+%h2 Shops List
 
-= link_to 'Add New Shop', new_shop_path, class: 'btn btn-primary'
+= link_to 'Add New Shop', [:new, :shop], class: 'btn btn-primary'
 
 %table.table#shops-list
   %thead
