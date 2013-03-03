@@ -1,8 +1,12 @@
 ProductsSearcher::Application.routes.draw do
 
-  resources :shops
+  resources :shops do
+    get 'add_products', on: :member
+  end
 
-  resources :products
+  resources :products do
+    get 'autocomplete', on: :collection
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

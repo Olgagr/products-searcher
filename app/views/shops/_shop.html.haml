@@ -1,0 +1,15 @@
+%tr
+  %td
+    = shop.name
+  %td
+    = shop.street
+  %td
+    = shop.postal_code
+  %td
+    = shop.city
+  %td
+    = link_to 'Add products', [:add_products, shop]
+    |
+    = link_to 'Edit', [:edit, shop]
+    |
+    = link_to 'Delete', [shop], confirm: 'Are you sure?', method: :delete

@@ -19,11 +19,11 @@ class ProductsController < ApplicationController
   end
 
   def edit
-    @product = Product.find(params[:id])
+    @product = find_product
   end
 
   def update
-    @product = Product.find(params[:id])
+    @product = find_product
 
     if @product.update_attributes(params[:product])
       redirect_to products_url, notice: 'Product was successfully edited.'
@@ -34,8 +34,19 @@ class ProductsController < ApplicationController
   end
 
   def destroy
-    Product.find(params[:id]).destroy
+    find_product.destroy
     redirect_to products_url, notice: 'Product was successfully deleted.'
+  end
+
+  def autocomplete
+    @products = Product.autocomplete(params[:q])
+    render json: @products
+  end
+
+  private
+
+  def find_product
+    Product.find(params[:id])
   end
 
 

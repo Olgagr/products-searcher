@@ -7,4 +7,6 @@ class Product < ActiveRecord::Base
 
   validates :name, presence: true
 
+  scope :autocomplete, lambda { |q| where('name like ?', "%#{q}%").order(:name) }
+
 end

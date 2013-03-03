@@ -1,0 +1,13 @@
+%h2
+  Add Products to
+  = @shop.name
+#shop-products
+  = text_field_tag :product_name, nil, class: 'input-xxlarge', placeholder: 'Write down product name'
+
+
+= content_for :scripts do
+  :javascript
+    (function(){}(
+      var productsShopCollection = new ProductsSearcher.Collections.Products(#{@shop.products.to_json.html_safe});
+      new ProductsSearcher.Views.AddProducts({ collection: productsShopCollection });
+    ));

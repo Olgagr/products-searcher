@@ -19,11 +19,11 @@ class ShopsController < ApplicationController
   end
 
   def edit
-    @shop = Shop.find(params[:id])
+    @shop = find_shop
   end
 
   def update
-    @shop = Shop.find(params[:id])
+    @shop = find_shop
 
     if @shop.update_attributes(params[:shop])
       redirect_to shops_path, notice: 'Shop was successfully updated.'
@@ -33,8 +33,18 @@ class ShopsController < ApplicationController
   end
 
   def destroy
-    Shop.find(params[:id]).destroy
+    find_shop.destroy
     redirect_to shops_path, notice: 'Shop was successfully destroyed.'
+  end
+
+  def add_products
+    @shop = find_shop
+  end
+
+  private
+
+  def find_shop
+    Shop.find(params[:id])
   end
 
 end

@@ -4,6 +4,8 @@ window.ProductsSearcher =
   Views: {}
   Routers: {}
   initialize: ->
+    new ProductsSearcher.Routers.Router()
+    Backbone.history.start(pushState: true)
 
 
 $(document).ready ->
