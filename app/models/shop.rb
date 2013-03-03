@@ -1,5 +1,9 @@
 class Shop < ActiveRecord::Base
+
   attr_accessible :city, :name, :postal_code, :street, :latitude, :longitude
+
+  has_many :prices
+  has_many :products, through: :prices
 
   validates :name, :street, :city, presence: true
 
