@@ -1,0 +1,16 @@
+paths:
+  application: 'application'
+  jquery-min: 'jquery'
+  jquery-ujs: 'jquery-ujs'
+  backbone: 'backbone'
+  underscore: 'underscore'
+
+shim:
+  backbone:
+    deps: ['underscore', 'jquery']
+    exports: 'Backbone'
+  underscore:
+    exports: '_'
+  bootstrap-typeahead:
+    deps: ['jquery']
+    exports: '$.fn.typeahead'

@@ -1,7 +1,12 @@
-class ProductsSearcher.Routers.Router extends Backbone.Router
+define ['jquery', 'underscore', 'backbone', 'views/shops/add_products'], ($, _, Backbone, AddProducts) ->
 
-  routes:
-    'shops/:shop_id/add_products': 'addProductsToShop'
+  Router = Backbone.Router.extend(
 
-  addProductsToShop: ->
-    new ProductsSearcher.Views.AddProducts()
+    routes:
+      'shops/:shop_id/add_products': 'addProductsToShop'
+
+    addProductsToShop: ->
+      new AddProducts()
+
+  )
+
