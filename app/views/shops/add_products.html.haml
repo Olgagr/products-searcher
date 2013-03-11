@@ -2,7 +2,7 @@
   Add Products to
   = @shop.name
 #shop-products
-  = text_field_tag :product_name, nil, class: 'input-xxlarge', placeholder: 'Write down product name'
+  = text_field_tag :product_name, nil, class: 'input-xxlarge', placeholder: 'Write down product name', autocomplete: 'off'
 
 = content_for :scripts do
   :javascript
