@@ -1,3 +1,6 @@
-class ProductsSearcher.Collections.Products extends Backbone.Collection
+define ['jquery', 'backbone', 'models/product'], ($, _, Product) ->
 
-  model: ProductsSearcher.Models.Product
+  Backbone.Collection.extend(
+    model: Product
+  )
+

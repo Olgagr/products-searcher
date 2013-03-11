@@ -6,6 +6,7 @@ gem 'jquery-rails'
 gem 'haml-rails', '~> 0.3.5'
 gem 'backbone-on-rails', '0.9.10.0'
 gem 'geocoder', '1.1.6'
+gem 'requirejs-rails', '0.9.1'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

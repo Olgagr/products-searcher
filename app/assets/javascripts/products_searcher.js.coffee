@@ -1,12 +1,11 @@
-window.ProductsSearcher =
-  Models: {}
-  Collections: {}
-  Views: {}
-  Routers: {}
-  initialize: ->
-    new ProductsSearcher.Routers.Router()
-    Backbone.history.start(pushState: true)
+define ['jquery', 'underscore', 'backbone', 'routers/router'], ($, _, Backbone, Router) ->
 
+  window.ProductsSearcher =
+    Models: {}
+    Collections: {}
+    Views: {}
+    Routers: {}
+    initialize: ->
+      new Router()
+      Backbone.history.start(pushState: true)
 
-$(document).ready ->
-  ProductsSearcher.initialize()

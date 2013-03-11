@@ -3,8 +3,8 @@
   %head
     %title ProductsSearcher
     = stylesheet_link_tag 'application', media: 'all'
+    = requirejs_include_tag 'application'
     = csrf_meta_tags
-
   %body
     .container
       - if notice
@@ -12,5 +12,5 @@
           = notice
       = yield
 
-    = javascript_include_tag 'application'
+
     = yield :scripts

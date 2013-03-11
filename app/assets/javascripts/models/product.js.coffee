@@ -1,3 +1,8 @@
-class ProductsSearcher.Models.Product extends Backbone.Model
+define ['jquery', 'backbone'], ($, _) ->
 
-  urlRoot: '/products'
+  Backbone.Model.extend(
+
+    urlRoot: '/products'
+
+  )
+

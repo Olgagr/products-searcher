@@ -8,6 +8,8 @@ ProductsSearcher::Application.routes.draw do
     get 'autocomplete', on: :collection
   end
 
+  root :to => 'shops#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

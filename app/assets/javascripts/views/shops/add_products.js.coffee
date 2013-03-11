@@ -1,13 +1,14 @@
-class ProductsSearcher.Views.AddProducts extends Backbone.View
+define ['jquery', 'underscore', 'backbone', 'bootstrap/bootstrap-typeahead'], ($, _, Backbone, typeahead) ->
 
-  el: '#shop-products'
+  Backbone.View.extend
 
-  initialize: ->
-    @.$('#product_name').typeahead(
-      ajax:
-        url: '/products/autocomplete'
-        method: 'get'
-        triggerLength: 1
-      itemSelected: (item, val, text) ->
+    el: '#shop-products'
 
-    )
+    initialize: ->
+      @.$('#product_name').typeahead(
+        ajax:
+          url: '/products/autocomplete'
+          method: 'get'
+          triggerLength: 1
+        itemSelected: (item, val, text) ->
+      )
