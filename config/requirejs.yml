@@ -1,3 +1,22 @@
+modules:
+  - name: "products_searcher"
+    exclude: ['jquery', 'underscore', 'backbone']
+  - name: "application"
+  - name: "jquery"
+  - name: "underscore"
+  - name: "backbone"
+    exclude: ['jquery', 'underscore']
+  - name: "bootstrap/bootstrap-typeahead"
+    exclude: ['jquery']
+  - name: "routers/router"
+    exclude: ['jquery', 'underscore', 'backbone']
+  - name: "models/product"
+    exclude: ['jquery', 'underscore', 'backbone']
+  - name: "collections/products"
+    exclude: ['jquery', 'underscore', 'backbone', 'models/product']
+  - name: "views/shops/add_products"
+    exclude: ['jquery', 'underscore', 'backbone']
+
 paths:
   application: 'application'
   jquery-min: 'jquery'
