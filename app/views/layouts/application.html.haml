@@ -3,7 +3,7 @@
   %head
     %title ProductsSearcher
     = stylesheet_link_tag 'application', media: 'all'
-    = requirejs_include_tag 'application'
+    = requirejs_include_tag('application').gsub('/assets/application', 'application').html_safe
     = csrf_meta_tags
   %body
     .container
