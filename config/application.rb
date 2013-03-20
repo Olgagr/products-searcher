@@ -55,6 +55,7 @@ module ProductsSearcher
 
     # Enable the asset pipeline
     config.assets.enabled = true
+    config.assets.paths << "#{Rails.root}/app/assets/templates"
 
     config.assets.initialize_on_precompile = false
 

@@ -16,6 +16,7 @@ end
 
 group :development do
   gem 'quiet_assets', '1.0.1'
+  gem 'meta_request', '0.2.2'
 end
 
 group :test, :development do

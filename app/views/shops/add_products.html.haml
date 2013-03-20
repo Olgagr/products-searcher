@@ -3,6 +3,7 @@
   = @shop.name
 #shop-products
   = text_field_tag :product_name, nil, class: 'input-xxlarge', placeholder: 'Write down product name', autocomplete: 'off'
+  %ul#shop-products-list
 
 = content_for :scripts do
   :javascript

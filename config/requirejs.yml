@@ -6,6 +6,8 @@ modules:
   - name: "underscore"
   - name: "backbone"
     exclude: ['jquery', 'underscore']
+  - name: "epoxy"
+    exclude: ['underscore', 'jquery', 'backbone']
   - name: "bootstrap/bootstrap-typeahead"
     exclude: ['jquery']
   - name: "routers/router"
@@ -16,13 +18,17 @@ modules:
     exclude: ['jquery', 'underscore', 'backbone', 'models/product']
   - name: "views/shops/add_products"
     exclude: ['jquery', 'underscore', 'backbone']
+  - name: "views/products/product_price"
+    exclude: ['jquery', 'underscore', 'backbone']
+  - name: "products/product_price_tmpl"
 
 paths:
   application: 'application'
   jquery-min: 'jquery'
-  jquery-ujs: 'jquery-ujs'
+  jquery-ujs: 'jquery_ujs'
   backbone: 'backbone'
   underscore: 'underscore'
+  epoxy: 'epoxy'
 
 shim:
   backbone:
@@ -33,3 +39,6 @@ shim:
   bootstrap-typeahead:
     deps: ['jquery']
     exports: '$.fn.typeahead'
+  epoxy:
+    deps: ['underscore', 'jquery', 'backbone']
+    exports: 'Epoxy'

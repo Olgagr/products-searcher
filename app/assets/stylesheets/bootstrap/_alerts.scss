@@ -13,6 +13,7 @@
   background-color: $warningBackground;
   border: 1px solid $warningBorder;
   @include border-radius($baseBorderRadius);
+
 }
 .alert,
 .alert h4 {
